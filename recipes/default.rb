@@ -29,6 +29,6 @@ execute "install_leiningen" do
   command "lein version"
   user   node[:lein][:user]
   group  node[:lein][:group]
-  environment ({"HOME" => node[:lein][:home], "HTTP_CLIENT" => 'curl --insecure -f -L -o'})
+  environment({"HOME" => node[:lein][:home]})
 end
 
